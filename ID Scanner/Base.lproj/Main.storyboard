@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="5uU-NT-EYz">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="5uU-NT-EYz">
                                 <rect key="frame" x="20" y="69" width="374" height="775"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In order to use the ID Scanner App, you must sign in with your UMBC Google Account. Tap the button below to log in." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HZ-Vh-zlR" colorLabel="IBBuiltInLabel-Red">
@@ -31,36 +31,33 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="T2m-nt-QlQ">
-                                        <rect key="frame" x="122" y="200" width="130" height="60"/>
+                                        <rect key="frame" x="99.5" y="245" width="175" height="70"/>
                                         <color key="backgroundColor" red="0.29019607843137252" green="0.69411764705882351" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="F0P-4l-2jP"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="s8s-oo-jCb"/>
+                                            <constraint firstAttribute="height" constant="70" id="F0P-4l-2jP"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="175" id="s8s-oo-jCb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="34"/>
                                         <state key="normal" title="Start!">
-                                            <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n1F-Zf-G51"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QY3-1E-fMf">
-                                        <rect key="frame" x="0.0" y="340" width="374" height="211.5"/>
+                                        <rect key="frame" x="0.0" y="440" width="374" height="66.5"/>
                                         <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="aiU-eQ-gcL">
-                                                <rect key="frame" x="0.0" y="0.0" width="164.5" height="211.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="z05-kI-LWA">
+                                                <rect key="frame" x="0.0" y="0.0" width="113.5" height="66.5"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WARNING!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="60" translatesAutoresizingMaskIntoConstraints="NO" id="hN0-vt-5G6">
-                                                <rect key="frame" x="164.5" y="0.0" width="209.5" height="211.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WARNING!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfi-JH-TKO">
+                                                <rect key="frame" x="113.5" y="0.0" width="260.5" height="66.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
                                                 <color key="textColor" red="1" green="0.099834581850000007" blue="0.1851027053" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="hN0-vt-5G6" firstAttribute="leading" secondItem="aiU-eQ-gcL" secondAttribute="trailing" priority="999" constant="13" id="c3J-Jq-B2A"/>
-                                        </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYr-OG-Ptl" colorLabel="IBBuiltInLabel-Red">
                                         <rect key="frame" x="0.0" y="631.5" width="374" height="143.5"/>
@@ -72,7 +69,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.97953232020547942" green="0.75698309075342463" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5uU-NT-EYz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Hjn-zU-dFK"/>
                             <constraint firstItem="5uU-NT-EYz" firstAttribute="top" secondItem="tZy-tQ-rDS" secondAttribute="top" constant="25" id="N9f-Iv-488"/>

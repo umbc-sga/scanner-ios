@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="5uU-NT-EYz">
-                                <rect key="frame" x="20" y="44" width="374" height="760"/>
+                                <rect key="frame" x="20" y="69" width="374" height="775"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In order to use the ID Scanner App, you must sign in with your UMBC Google Account. Tap the button below to log in." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HZ-Vh-zlR" colorLabel="IBBuiltInLabel-Red">
                                         <rect key="frame" x="6.5" y="0.0" width="361.5" height="120"/>
@@ -45,28 +45,41 @@
                                             <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n1F-Zf-G51"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="warningSign" translatesAutoresizingMaskIntoConstraints="NO" id="Hbn-ev-ubs">
-                                        <rect key="frame" x="0.0" y="340" width="374" height="196.5"/>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QY3-1E-fMf">
+                                        <rect key="frame" x="0.0" y="340" width="374" height="211.5"/>
+                                        <subviews>
+                                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="aiU-eQ-gcL">
+                                                <rect key="frame" x="0.0" y="0.0" width="164.5" height="211.5"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WARNING!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="60" translatesAutoresizingMaskIntoConstraints="NO" id="hN0-vt-5G6">
+                                                <rect key="frame" x="164.5" y="0.0" width="209.5" height="211.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                                <color key="textColor" red="1" green="0.099834581850000007" blue="0.1851027053" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="hN0-vt-5G6" firstAttribute="leading" secondItem="aiU-eQ-gcL" secondAttribute="trailing" priority="999" constant="13" id="c3J-Jq-B2A"/>
+                                        </constraints>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYr-OG-Ptl" colorLabel="IBBuiltInLabel-Red">
-                                        <rect key="frame" x="0.0" y="616.5" width="374" height="143.5"/>
+                                        <rect key="frame" x="0.0" y="631.5" width="374" height="143.5"/>
                                         <string key="text">You must allow the ID Scanner App to view and download files on your Google Drive account. This is just to create spreadsheets containing scanned ID Cards. </string>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
                                         <color key="textColor" red="1" green="0.09983458185391636" blue="0.18510270530667472" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <viewLayoutGuide key="safeArea" id="3tE-Bb-zlf"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5uU-NT-EYz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Hjn-zU-dFK"/>
-                            <constraint firstItem="5uU-NT-EYz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="N9f-Iv-488"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5uU-NT-EYz" secondAttribute="bottom" constant="58" id="ZFQ-S9-Y6G"/>
-                            <constraint firstItem="5uU-NT-EYz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b8t-TN-7Y7"/>
+                            <constraint firstItem="5uU-NT-EYz" firstAttribute="top" secondItem="tZy-tQ-rDS" secondAttribute="top" constant="25" id="N9f-Iv-488"/>
+                            <constraint firstItem="tZy-tQ-rDS" firstAttribute="bottom" secondItem="5uU-NT-EYz" secondAttribute="bottom" priority="998" constant="18" id="ZFQ-S9-Y6G"/>
+                            <constraint firstItem="5uU-NT-EYz" firstAttribute="centerX" secondItem="tZy-tQ-rDS" secondAttribute="centerX" id="b8t-TN-7Y7"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="tZy-tQ-rDS"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -75,6 +88,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="warningSign" width="728" height="603"/>
+        <image name="warning" width="900" height="760"/>
     </resources>
 </document>

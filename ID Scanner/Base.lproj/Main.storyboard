@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ID_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="startScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="ID_Scanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,6 +43,7 @@
                                         </state>
                                         <connections>
                                             <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n1F-Zf-G51"/>
+                                            <segue destination="eSZ-ZH-7Xa" kind="presentation" identifier="toSignedInScreen" id="Yyo-is-MTR"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QY3-1E-fMf">
@@ -82,6 +83,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cBe-KQ-Tuj">
+            <objects>
+                <viewController storyboardIdentifier="signInScreen" id="eSZ-ZH-7Xa" customClass="ViewController" customModule="ID_Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6J4-GC-bgQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mkq-Zn-JPB">
+                                <rect key="frame" x="20" y="44" width="60" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7p-Oo-G9W">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UEU-sA-ZgF">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="imageIcon"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHS-Qj-YhB">
+                                <rect key="frame" x="317" y="44" width="77" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.099834581850000007" blue="0.1851027053" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="Ny7-od-hmD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOut:" destination="eSZ-ZH-7Xa" eventType="touchUpInside" id="lWA-Ug-a58"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="logOutOfApp" id="q81-9A-xOM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97953232020000003" green="0.75698309080000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mkq-Zn-JPB" firstAttribute="bottom" secondItem="NHS-Qj-YhB" secondAttribute="bottom" id="5tm-T4-kuf"/>
+                            <constraint firstItem="Mkq-Zn-JPB" firstAttribute="leading" secondItem="6J4-GC-bgQ" secondAttribute="leadingMargin" id="TfQ-XV-51O"/>
+                            <constraint firstItem="NHS-Qj-YhB" firstAttribute="trailing" secondItem="6J4-GC-bgQ" secondAttribute="trailingMargin" id="eCJ-oC-GBQ"/>
+                            <constraint firstItem="d18-d8-jJU" firstAttribute="bottom" secondItem="Mkq-Zn-JPB" secondAttribute="bottom" constant="758" id="lj9-cC-jd3"/>
+                            <constraint firstItem="Mkq-Zn-JPB" firstAttribute="top" secondItem="d18-d8-jJU" secondAttribute="top" id="pvZ-i1-fGm"/>
+                            <constraint firstItem="Mkq-Zn-JPB" firstAttribute="top" secondItem="NHS-Qj-YhB" secondAttribute="top" id="s1X-9w-n5r"/>
+                            <constraint firstAttribute="trailing" secondItem="Mkq-Zn-JPB" secondAttribute="trailing" constant="334" id="vXE-PN-SkQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d18-d8-jJU"/>
+                    </view>
+                    <connections>
+                        <outlet property="profilePic" destination="UEU-sA-ZgF" id="uQD-kh-QuG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ytw-2O-GpJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915.94202898550736" y="126.5625"/>
         </scene>
     </scenes>
     <resources>

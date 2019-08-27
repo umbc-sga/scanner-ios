@@ -59,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let nc = NotificationCenter.default
             let fullNameLabelDict:[String: String] = ["fullName": fullName!]
             let profilePicDict:[String: UIImage] = ["profilePic": profilePic!]
-            nc.post(name: NSNotification.Name("signInToApp"), object: nil, userInfo: fullNameLabelDict)
+            nc.post(name: NSNotification.Name("showNameLabel"), object: nil, userInfo: fullNameLabelDict)
             nc.post(name: NSNotification.Name("setProfileImage"), object: nil, userInfo: profilePicDict)
             
         }

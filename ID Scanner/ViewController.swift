@@ -14,7 +14,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance()?.uiDelegate = self
-        NotificationCenter.default.addObserver(self, selector: #selector(switchToSignInScreen), name: NSNotification.Name("signInToApp"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateNameLabel), name: NSNotification.Name("updateNameLabel"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateProfilePic), name: NSNotification.Name("setProfileImage"), object: nil)
         // Do any additional setup after loading the view.
     }
     
@@ -33,12 +34,31 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         return false
     }
     
-    @objc func switchToSignInScreen(_ sender: NSNotification) {
-        //let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        //let newViewController = storyBoard.instantiateViewController(withIdentifier: "signInScreen")
-        let nc = NotificationCenter.default
-        nc.post(name: NSNotification.Name("showNameLabel"), object: nil, userInfo: sender.userInfo)
-        //self.present(newViewController, animated: true, completion: nil)
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @objc func updateNameLabel(_ notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            if let fullName = dict["fullName"] as? String {
+                //nameLabel.text = fullName
+                nameLabel.text = "Welcome, " + fullName + "!"
+            }
+        }
+    }
+    
+    @IBOutlet weak var profilePic: UIImageView!
+    
+    @objc func updateProfilePic(_ notification: NSNotification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            if let profilePicThing = dict["profilePic"] as? UIImage {
+                profilePic.image = profilePicThing
+            }
+        }
+    }
+    
+    @IBAction func logOut(_ sender: Any) {
+        GIDSignIn.sharedInstance()?.signOut()
+        performSegue(withIdentifier: "backToStart", sender: self)
+        
     }
     
 }

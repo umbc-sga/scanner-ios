@@ -14,7 +14,6 @@
 		392E6E3622F39A48008E0273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 392E6E3422F39A48008E0273 /* LaunchScreen.storyboard */; };
 		392E6E4122F39A48008E0273 /* ID_ScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392E6E4022F39A48008E0273 /* ID_ScannerTests.swift */; };
 		392E6E4C22F39A48008E0273 /* ID_ScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392E6E4B22F39A48008E0273 /* ID_ScannerUITests.swift */; };
-		399D2E5D2300A66500474766 /* SignedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D2E5C2300A66500474766 /* SignedInVC.swift */; };
 		4C12FD58256E3A9360C6D4A7 /* Pods_ID_ScannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5453C701E36EA55A6D45B311 /* Pods_ID_ScannerTests.framework */; };
 		612A20C00C593B0757CF611B /* Pods_ID_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F51E024FE5334B4DE99EF49 /* Pods_ID_Scanner.framework */; };
 		9AFE0F935F23F61F83544181 /* Pods_ID_ScannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EEA34A2AD663353D8DAF82 /* Pods_ID_ScannerUITests.framework */; };
@@ -54,7 +53,6 @@
 		392E6E4722F39A48008E0273 /* ID ScannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ID ScannerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		392E6E4B22F39A48008E0273 /* ID_ScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ID_ScannerUITests.swift; sourceTree = "<group>"; };
 		392E6E4D22F39A48008E0273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		399D2E5C2300A66500474766 /* SignedInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInVC.swift; sourceTree = "<group>"; };
 		46B9F08A58604AC3ECC5CBC9 /* Pods-ID ScannerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ID ScannerUITests.release.xcconfig"; path = "Target Support Files/Pods-ID ScannerUITests/Pods-ID ScannerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		46EEA34A2AD663353D8DAF82 /* Pods_ID_ScannerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ID_ScannerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5453C701E36EA55A6D45B311 /* Pods_ID_ScannerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ID_ScannerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,7 +143,6 @@
 				392E6E3222F39A48008E0273 /* Assets.xcassets */,
 				392E6E3422F39A48008E0273 /* LaunchScreen.storyboard */,
 				392E6E3722F39A48008E0273 /* Info.plist */,
-				399D2E5C2300A66500474766 /* SignedInVC.swift */,
 			);
 			path = "ID Scanner";
 			sourceTree = "<group>";
@@ -407,7 +404,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				399D2E5D2300A66500474766 /* SignedInVC.swift in Sources */,
 				392E6E2E22F39A45008E0273 /* ViewController.swift in Sources */,
 				392E6E2C22F39A45008E0273 /* AppDelegate.swift in Sources */,
 			);
